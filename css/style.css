@@ -1,0 +1,160 @@
+:root {
+    --gold: #C9A14A;
+    --gold-hover: #b38b38;
+    --premium-dark: #121212;
+    --cream: #fbf9f6; 
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Lớp thiết lập phông chữ Playfair Display cho các tiêu đề */
+.font-playfair { font-family: 'Playfair Display', serif; }
+
+/* Lớp thiết lập phông chữ Poppins cho các đoạn văn bản */
+.font-poppins { font-family: 'Poppins', sans-serif; }
+
+/* Lớp tăng khoảng cách giữa các chữ cái tạo sự thoáng đãng */
+.tracking-widest { letter-spacing: 0.15rem; }
+
+/* Lớp giảm kích thước chữ xuống mức nhỏ */
+.text-sm { font-size: 0.85rem; }
+
+/* Lớp đổi màu chữ thành màu vàng gold chủ đạo */
+.text-gold { color: var(--gold) !important; }
+
+/* Lớp đổi màu nền thành màu vàng gold chủ đạo */
+.bg-gold { background-color: var(--gold) !important; }
+
+/* Lớp đổi màu nền thành màu đen nhám cao cấp */
+.bg-premium { background-color: var(--premium-dark) !important; }
+
+/* Lớp đổi màu nền thành màu kem sáng nhẹ */
+.bg-light-cream { background-color: var(--cream) !important; }
+
+/* Lớp tạo viền màu vàng gold */
+.border-gold { border-color: var(--gold) !important; }
+
+/* Lớp tạo viền trên và dưới màu vàng gold */
+.border-y-gold {
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+}
+
+/* Lớp tạo vạch kẻ ngang trang trí màu vàng gold */
+.divider-gold {
+    height: 2px;
+    width: 60px;
+    background-color: var(--gold);
+}
+
+/* Lớp định dạng nút bấm với nền vàng, chữ trắng và bo góc */
+.btn-gold {
+    background-color: var(--gold);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* Lớp tạo hiệu ứng nổi lên và đổi màu khi trỏ chuột vào nút bấm vàng */
+.btn-gold:hover {
+    background-color: var(--gold-hover);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(201, 161, 74, 0.4);
+}
+
+/* Lớp đổi màu chữ thành vàng khi trỏ chuột */
+.hover-gold:hover { color: var(--gold) !important; }
+
+/* Lớp thẻ sản phẩm với hiệu ứng chuyển đổi mượt mà */
+.product-card {
+    transition: all 0.4s ease;
+}
+
+/* Lớp bọc hình ảnh sản phẩm, ẩn đi phần ảnh bị tràn khi phóng to */
+.product-image-wrapper {
+    overflow: hidden; 
+}
+
+/* Lớp thiết lập hiệu ứng phóng to chậm rãi cho hình ảnh sản phẩm */
+.product-image-wrapper img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Lớp phóng to hình ảnh khi người dùng trỏ chuột vào thẻ sản phẩm */
+.product-card:hover .product-image-wrapper img {
+    transform: scale(1.08);
+}
+
+/* Lớp phủ mờ chứa các nút chức năng, mặc định được ẩn đi */
+.product-overlay {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+/* Lớp hiển thị lớp phủ khi trỏ chuột vào thẻ sản phẩm */
+.product-card:hover .product-overlay {
+    opacity: 1; 
+}
+
+/* Lớp phủ màu đen trong suốt lên các thẻ danh mục sản phẩm */
+.category-card .category-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+/* Lớp làm tối lớp phủ khi trỏ chuột vào thẻ danh mục */
+.category-card:hover .category-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Lớp xóa viền mặc định của Bootstrap và đổi sang màu vàng khi focus */
+.form-control:focus, .form-select:focus {
+    box-shadow: none;
+    border-color: var(--gold);
+}
+
+/* Lớp giới hạn chiều cao phần tử bằng 80% chiều cao màn hình */
+.vh-80 { height: 80vh; }
+
+/* Lớp tùy chỉnh chiều rộng của thanh cuộn trong vùng chat */
+.chat-body::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Lớp định dạng màu và độ bo góc cho tay cầm của thanh cuộn chat */
+.chat-body::-webkit-scrollbar-thumb {
+    background-color: #ddd;
+    border-radius: 10px;
+}
+
+/* Lớp liên kết chân trang với màu xám và hiệu ứng chuyển đổi */
+.footer-links a {
+    color: #999;
+    text-decoration: none;
+    transition: 0.3s all;
+}
+
+/* Lớp đổi màu chữ sang vàng và đẩy lùi văn bản khi trỏ chuột vào liên kết */
+.footer-links a:hover {
+    color: var(--gold);
+    padding-left: 5px;
+}
+
+#openChatBtn {
+    transition: transform 0.2s ease;
+}
+
+#openChatBtn:hover {
+    transform: scale(1.1);
+}

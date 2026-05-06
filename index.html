@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aura Jewelry - Khám phá bộ sưu tập trang sức cao cấp, nhẫn kim cương, dây chuyền và bông tai hạng sang chuẩn quốc tế.">
+    <title>Aura Jewelry | Tinh Hoa Trang Sức Cao Cấp</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="90">
+
+    <!-- Giải thích lớp HTML: navbar: tạo thanh điều hướng, navbar-expand-lg: mở rộng menu trên màn hình lớn, navbar-dark: giao diện chữ sáng nền tối, bg-premium: nền đen cao cấp, sticky-top: cố định ở trên cùng, py-3: padding trên dưới, shadow-lg: đổ bóng tạo độ nổi -->
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-premium sticky-top py-3 shadow-lg">
+        <div class="container">
+            <!-- Giải thích lớp HTML: navbar-brand: định dạng logo thương hiệu, font-playfair: font chữ sang trọng, fw-bold: in đậm, text-gold: màu chữ vàng, fs-4: cỡ chữ vừa -->
+            <a class="navbar-brand font-playfair fw-bold text-gold fs-4" href="#">
+                <i class="bi bi-gem"></i> AURA JEWELRY
+            </a>
+
+            <!-- Giải thích lớp HTML: navbar-toggler: nút bấm thu phóng menu trên thiết bị di động -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+                aria-controls="navContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Giải thích lớp HTML: collapse: hiệu ứng thu gọn, navbar-collapse: nhóm các link điều hướng ẩn/hiện, font-poppins: font hiện đại, text-uppercase: in hoa, text-sm: cỡ chữ nhỏ -->
+            <div class="collapse navbar-collapse font-poppins text-uppercase text-sm" id="navContent">
+                <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#hero">Trang chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Về Aura</a></li>
+                    <!-- Giải thích lớp HTML: nav-item: phần tử trong danh sách menu, dropdown: cấu trúc menu thả xuống -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                            Trang Sức
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark bg-premium border-gold">
+                            <li><a class="dropdown-item" href="#products">Nhẫn Kim Cương</a></li>
+                            <li><a class="dropdown-item" href="#products">Dây Chuyền</a></li>
+                            <li><a class="dropdown-item" href="#products">Bông Tai</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#promotions">Ưu đãi</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Liên hệ</a></li>
+                </ul>
+
+                <!-- Giải thích lớp HTML: d-flex: sử dụng flexbox, align-items-center: căn giữa theo chiều dọc, gap-3: tạo khoảng cách giữa các phần tử -->
+                <div class="d-flex align-items-center gap-3">
+                    <a href="#" class="text-white text-decoration-none hover-gold"><i class="bi bi-person fs-5"></i></a>
+                    <!-- Giải thích lớp HTML: text-white: chữ trắng, text-decoration-none: xóa gạch chân thẻ a, hover-gold: đổi sang màu vàng khi trỏ chuột, position-relative: thiết lập vị trí tương đối -->
+                    <a href="#" class="text-white text-decoration-none hover-gold position-relative"
+                        data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+                        <i class="bi bi-cart3 fs-5"></i>
+                        <span id="navCartCount"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-gold text-dark">
+                            0
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Giải thích lớp HTML: carousel: tạo bộ trượt hình (slider), slide: hiệu ứng trượt, carousel-fade: chuyển cảnh bằng hiệu ứng mờ dần -->
+    <header id="hero" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active vh-80 bg-dark position-relative">
+                <!-- Giải thích lớp HTML: d-block: khối, w-100 & h-100: phủ kín chiều rộng và cao 100%, object-fit-cover: ảnh phủ kín khung hình không bị méo, opacity-50: độ mờ 50% -->
+                <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=1920&q=80"
+                    class="d-block w-100 h-100 object-fit-cover opacity-50" alt="Nhẫn kim cương">
+                <!-- Giải thích lớp HTML: carousel-caption: nội dung chữ đè lên slider, d-flex flex-column: xếp dọc, h-100: cao 100%, justify-content-center & align-items-center: căn giữa chính giữa màn hình -->
+                <div class="carousel-caption d-flex flex-column h-100 justify-content-center align-items-center">
+                    <h5 class="text-gold font-poppins fw-light tracking-widest text-uppercase mb-3">BST Mùa Thu 2024
+                    </h5>
+                    <h1 class="font-playfair display-1 fw-bold text-white mb-4">Ánh Sáng Khởi Nguyên</h1>
+                    <p class="font-poppins lead mb-5 text-light w-75 mx-auto">Vượt qua giới hạn thời gian, tỏa sáng giá
+                        trị vĩnh cửu.</p>
+                    <a href="#products"
+                        class="btn btn-gold btn-lg rounded-0 px-5 py-3 font-poppins text-uppercase tracking-widest hover-jello">Mua
+                        Sắm Ngay</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Giải thích lớp HTML: py-5: đệm (padding) trên dưới lớn, bg-light-cream: màu nền kem sáng -->
+    <section id="about" class="py-5 bg-light-cream">
+        <div class="container py-5">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <h6 class="text-gold font-poppins fw-semibold text-uppercase tracking-widest mb-3">Kế thừa di sản
+                    </h6>
+                    <h2 class="font-playfair display-5 fw-bold text-dark mb-4">Chế Tác Từ Trái Tim Nghệ Nhân</h2>
+                    <p class="font-poppins text-muted mb-4 lead">Trải qua hơn 2 thập kỷ phát triển, Aura Jewelry không
+                        chỉ mang tới trang sức cao cấp, mà còn là kỷ vật lưu giữ tình yêu và đẳng cấp cá nhân.</p>
+                    <p class="font-poppins text-muted mb-4">Mọi viên đá đều được GIA kiểm định, khẳng định sự tinh khiết
+                        tuyệt đối. Quy trình đúc vàng 18K độc quyền giữ màu sáng loáng bền bỉ với thời gian.</p>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANgAAADpCAMAAABx2AnXAAAAOVBMVEX////IwqfOyLHu7OTd2srLxaz4+PX7+/ny8evHwaXUz7r19O/Mxq7Z1cPPyrPn5Nnl4tbg3c/X0r8+F33ZAAADJ0lEQVR4nO3Y2ZKrIBCAYXHHXd//YQ9JJTOJdBOETNW5+L+rLMS2CTatRQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASNFd+vj/UU5z8Pva1tLHk63eP2ib8mkqy6Fe4zJfpiPuPK+qTGPG0IDaiImV5pyYNS/cGzv0XwifbGlK+cyfYhMruhdtv84uvfBaeIb/PCpBb0o31aFVE52YZzdm+Ri+aU0wfKrBbMVh9sCI9MSK0ZgPF9Dn8Ilc6Pu0BYZkJOaOHB41mqYrehsKn2i+z9Zt3lQ5ibkfBxfjfD92MHwat77b4l6a9DFZiT0CZIRPUz8q0mTWwJiMxIomNOwZvgyET9KZxx6yBlZMXmLBZRYTPslmhserwMTmJRYqeVHhk/web/+J4cn9x/TEppjwKV5WwM+i9OUlFrh83sLbiPYr2mvQWm1sshILTNgp/Bdb4bcqO6p1OSux3UxR4cPbwkXLW8E6tFY4JzF3vupKHOLCX9ffuqm3t3IvmpFYN+l1/BRPDX/deY60+pWeWNXcWsHM8Jd5F1X1/g/+SEus67fF3bWoebl7pXP4L/VVs1cGlb5ql+vlZE4FujXNr9sdtCkDjdLslcHlO32V2znOdXg1pTRyEzdPv467xF4eDZRNcGm5n583rlUvoFdIe73c2MhrZPQu9lPFXgPXlxz+w71bJOkou1jDWnGP9fvW8y3+EGqT4sNftEnLTlgfN4vUoPtF7JxY1+iN/SYtOyX8NY14pdbiJG/CWhz9S9R7KFP5Y57kOiWHv2SVa+sorjo3k14dENaZ/7SplquRWtrdFpD7iLFUVskhlvbVuyJ2YQaEx2jaI8NSqZhy+AsqrX/p5V70OLV8s7H+UhISG61SZ6+FjzeoHecif+MyW6rHybRbI7a20oPPTUxBD69/EyUwMdpkrvdN95iPYXIvFql6iU90pZqv3yHp/2Wcwep3dZNVGoZtuLdJxjaHvI+21von5Rocv/CkhI/S9/q0tL26l3RjVVW9fhGIvxSOlxgeAAAAAAAAAAAAAAAAAAAAAAAAwF/4B4oLE2/O3tt8AAAAAElFTkSuQmCC"
+                        alt="Aura Jewelry" style="height: 40px; opacity: 0.7;">
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1543294001-f7cd5d7fb516?auto=format&fit=crop&w=800&q=80"
+                        alt="Chế tác trang sức" class="img-fluid border-gold shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giải thích lớp HTML: py-5: khoảng cách đệm trên dưới lớn, bg-white: nền trắng -->
+    <section class="py-5 bg-white">
+        <div class="container py-3">
+            <div class="row g-4 text-center font-playfair uppercase">
+                <!-- Giải thích lớp HTML: col-md-3: chiếm 3/12 cột trên màn hình trung bình, col-sm-6: chiếm 6/12 cột trên màn hình nhỏ -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="category-card position-relative overflow-hidden cursor-pointer">
+                        <img src="https://lili.vn/wp-content/uploads/2021/12/Nhan-bac-nu-ma-bach-kim-dinh-da-CZ-co-4-la-LILI_372838_1.jpg.webp"
+                            alt="Nhẫn" class="img-fluid w-100 object-fit-cover" style="height: 350px;">
+                        <div class="category-overlay d-flex align-items-center justify-content-center">
+                            <h3 class="border-y-gold px-4 py-2 text-white">Nhẫn Nữ</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="category-card position-relative overflow-hidden cursor-pointer">
+                        <img src="https://lili.vn/wp-content/uploads/2022/09/Day-chuyen-doi-bac-dinh-da-CZ-hinh-ca-voi-va-buom-Brenna-LILI_123985_1-1.jpg.webp"
+                            alt="Dây chuyền" class="img-fluid w-100 object-fit-cover" style="height: 350px;">
+                        <div class="category-overlay d-flex align-items-center justify-content-center">
+                            <h3 class="border-y-gold px-4 py-2 text-white">Dây Chuyền</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="category-card position-relative overflow-hidden cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=500&q=80"
+                            alt="Bông tai" class="img-fluid w-100 object-fit-cover" style="height: 350px;">
+                        <div class="category-overlay d-flex align-items-center justify-content-center">
+                            <h3 class="border-y-gold px-4 py-2 text-white">Bông Tai</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="category-card position-relative overflow-hidden cursor-pointer">
+                        <img src="https://lili.vn/wp-content/uploads/2020/12/Lac-tay-bac-nu-ma-bach-kim-dinh-da-CZ-co-4-la-LILI_612672_20-400x400.jpg.webp"
+                            alt="Vòng Lắc Tay" class="img-fluid w-100 object-fit-cover" style="height: 350px;">
+                        <div class="category-overlay d-flex align-items-center justify-content-center">
+                            <h3 class="border-y-gold px-4 py-2 text-white">Vòng - Lắc Tay</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giải thích lớp HTML: py-5: đệm (padding) trên dưới lớn, bg-light-cream: màu nền kem sáng -->
+    <section id="products" class="py-5 bg-light-cream">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-gold font-poppins fw-semibold text-uppercase tracking-widest mb-2">Tuyệt Tác Chọn Lọc
+                </h6>
+                <h2 class="font-playfair display-5 fw-bold text-dark mb-3">Sản Phẩm Bán Chạy</h2>
+                <div class="divider-gold mx-auto mt-3"></div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Giải thích lớp HTML: col-lg-3: chiếm 3/12 cột trên màn hình lớn, col-md-6: chiếm 6/12 cột ở màn hình vừa -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card border-0 rounded-0 text-center h-100 bg-transparent">
+                        <div class="position-relative overflow-hidden product-image-wrapper">
+                            <span
+                                class="badge bg-gold position-absolute top-0 start-0 m-3 z-1 font-poppins text-dark">BEST
+                                SELLER</span>
+                            <img src="https://lili.vn/wp-content/uploads/2023/12/Nhan-bac-nu-dinh-kim-cuong-Moissanite-5-carat-Winter-LILI_094167_1-1.jpg"
+                                class="card-img-top rounded-0" alt="Nhẫn Kim Cương Royal">
+                            <div class="product-overlay d-flex gap-2 justify-content-center align-items-center">
+                                <!-- Giải thích lớp HTML: btn: nút bấm, btn-light: nút màu sáng, rounded-circle: bo tròn -->
+                                <button class="btn btn-light rounded-circle" data-bs-toggle="modal"
+                                    data-bs-target="#quickViewModal"
+                                    onclick="setModalData('Nhẫn Kim Cương Royal', 85000000, 'https://lili.vn/wp-content/uploads/2023/12/Nhan-bac-nu-dinh-kim-cuong-Moissanite-5-carat-Winter-LILI_094167_1-1.jpg')"><i
+                                        class="bi bi-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body pt-4">
+                            <div class="text-gold small mb-2"><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <h5 class="card-title font-playfair fw-bold">Nhẫn Kim Cương Royal</h5>
+                            <p class="card-text text-muted font-poppins">85,000,000 ₫</p>
+                            <!-- Giải thích lớp HTML: btn-outline-dark: viền đen, btn-sm: kích thước nhỏ, rounded-0: góc vuông, w-100: rộng 100%, font-poppins: font chữ, text-uppercase: in hoa toàn bộ, py-2: đệm trên dưới, btn-add-cart: lớp tùy chỉnh để xử lý JS -->
+                            <button
+                                class="btn btn-outline-dark btn-sm rounded-0 w-100 font-poppins text-uppercase py-2 btn-add-cart"
+                                data-id="1" data-name="Nhẫn Kim Cương Royal" data-price="85000000"
+                                data-img="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=100&q=80">
+                                Thêm Giỏ Hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Giải thích lớp HTML: col-lg-3: chiếm 3/12 cột trên màn hình lớn, col-md-6: chiếm 6/12 cột ở màn hình vừa -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card border-0 rounded-0 text-center h-100 bg-transparent">
+                        <div class="position-relative overflow-hidden product-image-wrapper">
+                            <img src="https://lili.vn/wp-content/uploads/2021/08/Day-chuyen-doi-bac-hinh-ca-heo-hong-Forever-Love-LILI_528145_3.jpg"
+                                class="card-img-top rounded-0" alt="Dây Chuyền Ánh Trăng">
+                            <div class="product-overlay d-flex gap-2 justify-content-center align-items-center">
+                                <button class="btn btn-light rounded-circle" data-bs-toggle="modal"
+                                    data-bs-target="#quickViewModal"
+                                    onclick="setModalData('Dây Chuyền Ánh Trăng', 42000000, 'https://lili.vn/wp-content/uploads/2021/08/Day-chuyen-doi-bac-hinh-ca-heo-hong-Forever-Love-LILI_528145_3.jpg')"><i
+                                        class="bi bi-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body pt-4">
+                            <div class="text-gold small mb-2"><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                            <h5 class="card-title font-playfair fw-bold">Dây Chuyền Ánh Trăng</h5>
+                            <p class="card-text text-muted font-poppins">42,000,000 ₫</p>
+                            <button
+                                class="btn btn-outline-dark btn-sm rounded-0 w-100 font-poppins text-uppercase py-2 btn-add-cart"
+                                data-id="2" data-name="Dây Chuyền Ánh Trăng" data-price="42000000"
+                                data-img="https://images.unsplash.com/photo-1599643477877-530eb83abc8e?auto=format&fit=crop&w=100&q=80">
+                                Thêm Giỏ Hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Giải thích lớp HTML: col-lg-3: chiếm 3/12 cột trên màn hình lớn, col-md-6: chiếm 6/12 cột ở màn hình vừa -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card border-0 rounded-0 text-center h-100 bg-transparent">
+                        <div class="position-relative overflow-hidden product-image-wrapper">
+                            <img src="https://lili.vn/wp-content/uploads/2022/03/Bong-tai-bac-nu-dinh-da-CZ-co-4-la-LILI_453329_1.jpg.webp"
+                                class="card-img-top rounded-0" alt="Bông Tai Ngọc Trai">
+                            <div class="product-overlay d-flex gap-2 justify-content-center align-items-center">
+                                <button class="btn btn-light rounded-circle" data-bs-toggle="modal"
+                                    data-bs-target="#quickViewModal"
+                                    onclick="setModalData('Bông Tai Ngọc Trai', 35000000, 'https://lili.vn/wp-content/uploads/2022/03/Bong-tai-bac-nu-dinh-da-CZ-co-4-la-LILI_453329_1.jpg.webp')"><i
+                                        class="bi bi-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body pt-4">
+                            <div class="text-gold small mb-2"><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                            <h5 class="card-title font-playfair fw-bold">Bông Tai Ngọc Trai</h5>
+                            <p class="card-text text-muted font-poppins">35,000,000 ₫</p>
+                            <button
+                                class="btn btn-outline-dark btn-sm rounded-0 w-100 font-poppins text-uppercase py-2 btn-add-cart"
+                                data-id="3" data-name="Bông Tai Ngọc Trai" data-price="35000000"
+                                data-img="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=100&q=80">
+                                Thêm Giỏ Hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Giải thích lớp HTML: col-lg-3: chiếm 3/12 cột trên màn hình lớn, col-md-6: chiếm 6/12 cột ở màn hình vừa -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card product-card border-0 rounded-0 text-center h-100 bg-transparent">
+                        <div class="position-relative overflow-hidden product-image-wrapper">
+                            <img src="https://lili.vn/wp-content/uploads/2020/11/vong-tay-bac-925-dinh-pha-le-swarovski-1.jpg"
+                                class="card-img-top rounded-0" alt="Lắc Tay Vàng Trắng">
+                            <div class="product-overlay d-flex gap-2 justify-content-center align-items-center">
+                                <button class="btn btn-light rounded-circle" data-bs-toggle="modal"
+                                    data-bs-target="#quickViewModal"
+                                    onclick="setModalData('Lắc Tay Vàng Trắng', 26500000, 'https://lili.vn/wp-content/uploads/2020/11/vong-tay-bac-925-dinh-pha-le-swarovski-1.jpg')"><i
+                                        class="bi bi-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="card-body pt-4">
+                            <div class="text-gold small mb-2"><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                    class="bi bi-star-fill"></i><i class="bi bi-star"></i></div>
+                            <h5 class="card-title font-playfair fw-bold">Lắc Tay Vàng Trắng</h5>
+                            <p class="card-text text-muted font-poppins">26,500,000 ₫</p>
+                            <button
+                                class="btn btn-outline-dark btn-sm rounded-0 w-100 font-poppins text-uppercase py-2 btn-add-cart"
+                                data-id="4" data-name="Lắc Tay Vàng Trắng" data-price="26500000"
+                                data-img="https://images.unsplash.com/photo-1629224316810-9d8805b95e76?auto=format&fit=crop&w=100&q=80">
+                                Thêm Giỏ Hàng
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giải thích lớp HTML: py-6: padding lớn (tùy chỉnh), position-relative: vị trí tương đối để đè lớp nền -->
+    <section id="promotions" class="py-6 position-relative"
+        style="background: url('https://images.unsplash.com/photo-1617264858850-c4193502be9b?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat fixed;">
+        <!-- Giải thích lớp HTML: position-absolute: vị trí tuyệt đối đè lên trên, top-0 start-0: canh góc trái trên cùng, w-100 h-100: phủ kín màn hình, bg-premium: nền đen cao cấp, opacity-75: mờ 75% -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 bg-premium opacity-75"></div>
+        <div class="container py-5 position-relative z-1 text-center text-white">
+            <h5 class="text-gold font-poppins fw-semibold text-uppercase tracking-widest mb-3">Chương Trình Đặc Quyền
+            </h5>
+            <h2 class="font-playfair display-4 fw-bold mb-4">Mùa Chung Đôi - Giảm Trực Tiếp 15%</h2>
+            <p class="font-poppins lead mb-5 mx-auto" style="max-width: 600px;">Áp dụng cho toàn bộ thiết kế nhẫn cưới
+                Platinum và Kim Cương. Cơ hội sỡ hữu trang sức hạng sang với ưu đãi hiếm có.</p>
+            <a href="#products"
+                class="btn btn-gold btn-lg rounded-0 px-5 text-uppercase font-poppins fw-medium tracking-widest">Khám
+                Phá Ngay</a>
+        </div>
+    </section>
+
+    <!-- Giải thích lớp HTML: py-5: đệm trên dưới lớn, bg-white: nền trắng, border-bottom: tạo viền bên dưới -->
+    <section id="contact" class="py-5 bg-white border-bottom">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-gold font-poppins fw-semibold text-uppercase tracking-widest mb-2">Trung Tâm Dịch Vụ
+                </h6>
+                <h2 class="font-playfair display-5 fw-bold text-dark">Hãy Để Chúng Tôi Phục Vụ Bạn</h2>
+                <div class="divider-gold mx-auto mt-3"></div>
+            </div>
+
+            <div class="row g-5 align-items-center">
+                <!-- Giải thích lớp HTML: col-lg-6: chia cột chiếm 50% độ rộng ở màn hình lớn -->
+                <div class="col-lg-6">
+                    <div class="bg-light-cream p-4 p-md-5">
+                        <h4 class="font-playfair fw-bold mb-4">Gửi Yêu Cầu Tư Vấn</h4>
+                        <!-- Giải thích lớp HTML: needs-validation: lớp của Bootstrap để kiểm tra lỗi form nhập liệu, font-poppins: font chữ -->
+                        <form id="contactForm" class="needs-validation font-poppins" novalidate>
+                            <div class="mb-3">
+                                <label class="form-label text-muted text-sm text-uppercase">Họ và tên *</label>
+                                <input type="text" class="form-control rounded-0" id="cfName" required>
+                                <div class="invalid-feedback">Xin vui lòng điền họ tên.</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-muted text-sm text-uppercase">Số điện thoại *</label>
+                                    <input type="tel" class="form-control rounded-0" id="cfPhone" pattern="[0-9]{9,11}"
+                                        required>
+                                    <div class="invalid-feedback">Sai định dạng số điện thoại.</div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label text-muted text-sm text-uppercase">Email *</label>
+                                    <input type="email" class="form-control rounded-0" id="cfEmail" required>
+                                    <div class="invalid-feedback">Mail chưa hợp lệ.</div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label class="form-label text-muted text-sm text-uppercase">Ghi chú thêm</label>
+                                <textarea class="form-control rounded-0" rows="3"></textarea>
+                            </div>
+                            <!-- Giải thích lớp HTML: alert: hộp thông báo, d-none: ẩn đi mặc định, rounded-0: bỏ bo góc, font-poppins: font chữ, text-sm: cỡ chữ nhỏ -->
+                            <div id="formAlertMessage" class="alert d-none rounded-0 font-poppins text-sm" role="alert">
+                            </div>
+
+                            <button type="submit"
+                                class="btn btn-dark w-100 rounded-0 py-3 text-uppercase font-poppins tracking-widest">Gửi
+                                Thông Tin</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Giải thích lớp HTML: col-lg-6: chia cột chiếm 50% độ rộng ở màn hình lớn -->
+                <div class="col-lg-6">
+                    <div class="mb-4">
+                        <ul class="list-unstyled font-poppins text-secondary">
+                            <li class="mb-3 d-flex align-items-start">
+                                <i class="bi bi-geo-alt-fill text-gold fs-4 me-3 mt-1"></i>
+                                <div>
+                                    <strong class="text-dark d-block">Trụ Sở Flagship Tp. HCM</strong>
+                                    Số 123 Đường Đồng Khởi, Phường Bến Nghé, Quận 1, Tp. Hồ Chí Minh
+                                </div>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center">
+                                <i class="bi bi-telephone-fill text-gold fs-4 me-3"></i>
+                                <span class="text-dark fw-medium">Hotline T2-CN: 1800 6868</span>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center">
+                                <i class="bi bi-envelope-fill text-gold fs-4 me-3"></i>
+                                vip-care@aurajewelry.vn
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Giải thích lớp HTML: ratio & ratio-16x9: tạo khung tỷ lệ chuẩn 16:9 cho bản đồ, shadow-sm: đổ bóng nhẹ, border-black border-opacity-10: viền đen mờ -->
+                    <div class="ratio ratio-16x9 shadow-sm border border-black border-opacity-10">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4627195821034!2d106.70014697477382!3d10.775830960534292!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f4743ebdf1b%3A0xc64fb49942a969bc!2zxJDhu5NuZyBLaOG7n2ksIELhur9uIE5naMOpLCBRdeG6rW4gMSwgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1700000000000!5m2!1svi!2s"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            style="border:0;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Giải thích lớp HTML: bg-premium: nền tối cao cấp, text-white: chữ trắng, pt-5 pb-3: khoảng cách padding phần trên và dưới -->
+    <footer class="bg-premium text-white pt-5 pb-3">
+        <div class="container pt-3">
+            <div class="row g-4 font-poppins">
+                <div class="col-lg-4">
+                    <h3 class="font-playfair fw-bold text-gold mb-4"><i class="bi bi-gem"></i> AURA</h3>
+                    <p class="text-secondary text-sm pe-md-4">AURA tự hào là tinh hoa sáng tạo ngành kim hoàn, mang đến
+                        diện mạo đắt giá và hoàn mỹ nhất đến phái đẹp.</p>
+                    <div class="d-flex gap-2 mt-4">
+                        <a href="#" class="btn btn-outline-secondary text-white rounded-circle"><i
+                                class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-secondary text-white rounded-circle"><i
+                                class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-secondary text-white rounded-circle"><i
+                                class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="text-white fw-bold mb-4 font-playfair">Dịch Vụ</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#">Chính sách trả góp</a></li>
+                        <li class="mb-2"><a href="#">Đổi trả - Bảo hành</a></li>
+                        <li class="mb-2"><a href="#">Hướng dẫn đo size</a></li>
+                        <li class="mb-2"><a href="#">Hạng thẻ VIP mới</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-6">
+                    <h5 class="text-white fw-bold mb-4 font-playfair">Về Tổ Chức</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#">Câu chuyện kỷ nguyên</a></li>
+                        <li class="mb-2"><a href="#">Triển vọng kinh doanh</a></li>
+                        <li class="mb-2"><a href="#">Tham gia đội ngũ</a></li>
+                        <li class="mb-2"><a href="#">Tin tức & Sự kiện</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="text-white fw-bold mb-4 font-playfair">Đăng Ký Đón Bản Tin</h5>
+                    <p class="text-secondary text-sm">Nhận thông báo Bộ Sưu Tập sớm nhất cùng các Deal kín từ AURA.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control rounded-0 bg-dark text-white border-secondary"
+                            placeholder="Nhập địa chỉ Email...">
+                        <button class="btn btn-gold rounded-0 text-uppercase fw-medium" type="button">Đăng Ký</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center">
+                <p class="text-secondary text-sm mb-0">© 2024 Aura Jewelry E-Commerce Layout. Phát triển cho mục đích
+                    học thuật.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Giải thích lớp HTML: offcanvas: thành phần ẩn trượt ra (giỏ hàng), offcanvas-end: trượt từ cạnh phải, bg-light-cream: màu nền kem, font-poppins: font chữ -->
+    <div class="offcanvas offcanvas-end bg-light-cream font-poppins" tabindex="-1" id="cartOffcanvas"
+        aria-labelledby="cartOffcanvasLabel">
+        <div class="offcanvas-header bg-premium text-white border-bottom border-gold">
+            <h5 class="offcanvas-title font-playfair text-gold fw-bold" id="cartOffcanvasLabel"><i
+                    class="bi bi-bag me-2"></i> Giỏ Hàng Của Bạn</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Close"></button>
+        </div>
+        <!-- Giải thích lớp HTML: offcanvas-body: nội dung offcanvas, d-flex flex-column: hiển thị dọc, gap-3: khoảng cách các phần tử, overflow-auto: tự động có thanh cuộn -->
+        <div class="offcanvas-body d-flex flex-column gap-3 overflow-auto" id="cart-items-container">
+            <!-- Giải thích lớp HTML: text-center: căn giữa chữ, text-muted: chữ màu nhạt, my-5: khoảng cách margin dọc -->
+            <p class="text-center text-muted my-5" id="empty-cart-msg">Giỏ hàng đang trống.</p>
+        </div>
+        <!-- Giải thích lớp HTML: offcanvas-footer: phần chân offcanvas, p-4: padding 4 phía, border-top: viền phía trên, bg-white: nền trắng -->
+        <div class="offcanvas-footer p-4 border-top bg-white">
+            <div class="d-flex justify-content-between fw-bold mb-4 fs-5 text-dark">
+                <span>Tạm tính:</span>
+                <span id="cart-total" class="text-gold">0 ₫</span>
+            </div>
+            <button class="btn btn-dark w-100 rounded-0 py-3 text-uppercase font-poppins tracking-widest fw-bold"
+                id="checkout-btn">Thanh Toán An Toàn <i class="bi bi-lock ms-2"></i></button>
+        </div>
+    </div>
+
+    <!-- Giải thích lớp HTML: modal: hộp thoại nổi, fade: hiệu ứng mờ dần khi bật -->
+    <div class="modal fade" id="quickViewModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-0 border-0">
+                <div class="modal-body p-0 position-relative">
+                    <button type="button"
+                        class="btn-close position-absolute top-0 end-0 m-3 z-1 bg-white p-2 rounded-circle shadow"
+                        data-bs-dismiss="modal"></button>
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="" id="modalImg" class="img-fluid h-100 w-100 object-fit-cover" alt="Sản Phẩm"
+                                style="min-height:400px;">
+                        </div>
+                        <div class="col-md-6 p-4 p-lg-5 bg-white d-flex flex-column justify-content-center">
+                            <h3 class="font-playfair fw-bold mb-2 text-dark" id="modalTitle">Tên SP</h3>
+                            <h4 class="font-poppins text-gold fw-semibold mb-3"><span id="modalPrice"></span> ₫</h4>
+                            <p class="font-poppins text-muted text-sm mb-4">Mẫu sản phẩm có độ tinh khiết cực phẩm được
+                                thợ kim hoàn thao tác kỳ công.</p>
+
+                            <select class="form-select rounded-0 mb-4 font-poppins text-sm border-secondary">
+                                <option selected>Chọn Size Của Bạn...</option>
+                                <option>Ni 10 (15.5mm)</option>
+                                <option>Ni 11 (16mm)</option>
+                                <option>Ni 12 (16.5mm)</option>
+                            </select>
+
+                            <button
+                                class="btn btn-gold w-100 rounded-0 py-3 text-uppercase font-poppins mb-2 tracking-widest"
+                                data-bs-dismiss="modal">Trở về mua sắm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Giải thích lớp HTML: position-fixed: ghim cố định, bottom-0 end-0: nằm sát góc dưới cùng bên phải màn hình, p-3: padding -->
+    <div id="liveChatWidget" class="position-fixed bottom-0 end-0 p-3" style="z-index: 1050;">
+        <!-- Giải thích lớp HTML: card: khung chứa thẻ thông tin, border-0: bỏ viền, shadow-lg: bóng to, d-none: mặc định ẩn, mb-3: margin dưới -->
+        <div id="chatBox" class="card border-0 shadow-lg d-none mb-3"
+            style="width: 330px; border-radius: 12px; overflow: hidden;">
+            <div class="bg-premium text-white p-3 d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center gap-2 font-poppins">
+                    <!-- Giải thích lớp HTML: bg-gold: nền vàng, rounded-circle: bo tròn, d-flex align-items-center justify-content-center: căn giữa các nội dung con bên trong -->
+                    <div class="bg-gold rounded-circle d-flex align-items-center justify-content-center"
+                        style="width:35px;height:35px">
+                        <i class="bi bi-headset"></i>
+                    </div>
+                    <div>
+                        <h6 class="mb-0 fw-bold font-playfair">CSKH Aura</h6>
+                        <small class="text-gold" style="font-size: 0.75rem;">Đang hoạt động</small>
+                    </div>
+                </div>
+                <!-- Giải thích lớp HTML: btn-close: nút đóng hình X, btn-close-white: màu trắng -->
+                <button type="button" class="btn-close btn-close-white" id="closeChatBtn"></button>
+            </div>
+
+            <!-- Giải thích lớp HTML: card-body: nội dung chính của thẻ, bg-light-cream: nền kem, overflow-auto: thanh cuộn khi văn bản dài, font-poppins: font chữ -->
+            <div class="card-body bg-light-cream overflow-auto font-poppins" id="chatMessages"
+                style="height: 300px; padding: 15px;">
+                <!-- Giải thích lớp HTML: d-flex: dùng flexbox, mb-3: giãn cách lề dưới -->
+                <div class="d-flex mb-3">
+                    <div class="bg-white border text-dark rounded-3 px-3 py-2 text-sm shadow-sm" style="max-width:85%">
+                        Xin chào Quý khách! Chuyên viên Aura có thể hỗ trợ thông tin gì cho bạn?
+                    </div>
+                </div>
+            </div>
+
+            <!-- Giải thích lớp HTML: card-footer: phần chân khung chat, bg-white: nền trắng, border-top: viền trên, p-2: padding nhỏ -->
+            <div class="card-footer bg-white border-top p-2">
+                <div class="input-group">
+                    <input type="text" id="chatInput" class="form-control border-0 font-poppins text-sm shadow-none"
+                        placeholder="Viết phản hồi...">
+                    <button class="btn btn-gold rounded-3 px-3 m-1 d-flex align-items-center text-white"
+                        id="sendChatBtn">
+                        <i class="bi bi-send-fill"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Giải thích lớp HTML: btn-dark: nút nền đen, rounded-circle: bo tròn, shadow-lg: đổ bóng lớn, float-end: đẩy sang phải, position-relative: căn vị trí tương đối để mốc gắn dấu chấm đỏ -->
+        <button id="openChatBtn"
+            class="btn btn-dark rounded-circle shadow-lg d-flex align-items-center justify-content-center float-end position-relative"
+            style="width: 60px; height: 60px;">
+            <i class="bi bi-chat-dots-fill fs-3 text-gold"></i>
+            <span
+                class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"></span>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
